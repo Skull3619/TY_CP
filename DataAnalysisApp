@@ -1,1 +1,66 @@
+// Normal Code
 
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class DataAnalysis_Test {
+    static String[][] arr;
+    static List<String> data = new ArrayList<String>();
+    static List<String> a = new ArrayList<String>();
+    static int index1;
+
+//    public static void addElement(String[] array, String a){
+//        String[] newarr = new String[array.length+1];
+//        int j = 0;
+//        for (String i:array) {
+//            newarr[j] = i;
+//            j++;
+//        }
+//        newarr[j] = a;
+//        data = newarr;
+//    }
+
+    public static void main(String[] args) throws Exception {
+
+
+        Scanner read = new Scanner(new File("E:\\Atharva\\SY\\DS\\CP\\archive\\oasis_longitudinal.csv"));
+//        read.useDelimiter(",");
+
+//        while(read.hasNextLine()){
+////            String line = read.nextLine();
+////            data.add(line);
+//            data.add(read.nextLine());
+//            data.add("\n");
+//        }
+        while(read.hasNextLine()){
+            System.out.println();
+//            String[] line = read.nextLine().split();
+//            data.add(line);
+//            data.add(read.nextLine()+"\n");
+//            data.add("\n");
+        }
+
+        read.close();
+
+//        try {
+//            while (true) {
+//                y = data.indexOf("\n");
+//                a.addAll(data.subList(x, y));
+//                System.out.println(y);
+//            }
+//        }
+//        catch(Exception e){
+//            e.printStackTrace();
+//        }
+//        System.out.println(a);
+
+
+
+        for (String i:data)
+            for (String j:i.split(","))
+                System.out.printf("%20s", j);
+
+    }
+}
